@@ -1733,3 +1733,19 @@ domain:ideco.ru
 domain:idecosoftware.ru
 domain:myoffice.ru
 domain:qiwi.com
+
+# Сервисы определения IP — напрямую: приложения банков и маркетплейсов проверяют через них, включён ли VPN
+domain:2ip.ru
+domain:2ip.io
+domain:ifconfig.me
+domain:ifconfig.co
+domain:ipify.org
+domain:ip.sb
+domain:ipapi.is
+domain:ipapi.co
+domain:iplocate.io
+domain:ipinfo.io
+domain:showip.net
+domain:icanhazip.com
+domain:ident.me
+domain:checkip.amazonaws.com
