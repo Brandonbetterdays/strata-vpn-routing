@@ -1,0 +1,89 @@
+name: Build routing
+
+on:
+  schedule:
+    - cron: "30 2 * * *"        # daily, 05:30 Moscow
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "geoip/**"
+      - "profile/**"
+      - "scripts/**"
+      - ".github/workflows/build.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-routing
+  cancel-in-progress: false
+
+env:
+  BASE_URL: https://cdn.jsdelivr.net/gh/${{ github.repository }}@release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # make_profile.py reads the commit time of profile/strata.json
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: stable      # builders pin their own versions; GOTOOLCHAIN=auto fetches them
+          cache: false
+
+      - name: Build geosite.dat and geoip.dat
+        run: bash scripts/build.sh
+
+      - name: Get Xray (latest release) for the start-up test
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 -o xray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
+          unzip -oq xray.zip xray -d .xray && chmod +x .xray/xray && .xray/xray version | head -1
+
+      - name: Get the last published files
+        run: |
+          set -euo pipefail
+          if git ls-remote --exit-code --heads origin release >/dev/null; then
+            git worktree add published origin/release
+          else
+            git worktree add --detach published && (cd published && git checkout --orphan release && git rm -rfq . )
+          fi
+
+      - name: Make the Happ / Incy profile
+        run: python3 scripts/make_profile.py "$BASE_URL" out
+
+      - name: Validate (geo codes, sizes, xray run -test)
+        run: |
+          python3 scripts/validate.py out out/strata-profile.json --xray .xray/xray \
+            --template profile/subscription-template.json --previous published
+
+      - name: Publish only if something changed
+        run: |
+          set -euo pipefail
+          changed=0
+          for f in geosite.dat geoip.dat strata-profile.json; do
+            cmp -s "out/$f" "published/$f" || changed=1
+          done
+          if [ "$changed" = 0 ]; then echo "No changes — nothing to publish"; exit 0; fi
+          TAG=$(date -u +%Y%m%d%H%M)
+          rm -rf published/lists
+          cp -a out/geosite.dat out/geoip.dat out/sha256sums.txt out/SOURCES.txt \
+                out/strata-profile.json out/happ.txt out/incy.txt out/lists published/
+          cd published
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "release $TAG"
+          git tag "$TAG"
+          git push -q origin HEAD:refs/heads/release "refs/tags/$TAG"
+          for f in geosite.dat geoip.dat strata-profile.json; do
+            curl -fsS --retry 3 "https://purge.jsdelivr.net/gh/${{ github.repository }}@release/$f" >/dev/null || true
+          done
+          echo "Published $TAG"

@@ -1,0 +1,12 @@
+# STRATA-TUNNEL — через VPN: заблокированное в РФ и то, что ограничено для российских IP.
+# В профиле стоит раньше STRATA-DIRECT, поэтому при пересечении побеждает VPN.
+# Свои домены добавляйте в strata-tunnel-custom.
+include:strata-tunnel-custom
+# из hydraponique/roscomvpn-geosite (MIT):
+include:category-geoblock-ru
+include:youtube
+include:telegram
+include:github
+include:google-play
+include:google-deepmind
+include:twitch-ads

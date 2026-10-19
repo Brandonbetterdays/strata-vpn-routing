@@ -1,0 +1,6 @@
+.build/
+out/
+.xray/
+xray.zip
+published/
+__pycache__/

@@ -1,0 +1,4 @@
+# STRATA-BLOCK — блокировать: торрент-трекеры и телеметрия Windows.
+# из hydraponique/roscomvpn-geosite (MIT):
+include:torrent
+include:win-spy
