@@ -1,0 +1,161 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "policy": {
+    "levels": {
+      "0": {
+        "handshake": 8,
+        "connIdle": 300,
+        "uplinkOnly": 2,
+        "downlinkOnly": 5
+      }
+    }
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "udp": true
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "routeOnly": true
+      }
+    },
+    {
+      "tag": "http",
+      "listen": "127.0.0.1",
+      "port": 10809,
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ],
+        "routeOnly": true
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "tag": "DIRECT",
+      "streamSettings": {
+        "sockopt": {
+          "domainStrategy": "UseIPv4"
+        }
+      }
+    },
+    {
+      "protocol": "blackhole",
+      "tag": "BLOCK"
+    }
+  ],
+  "dns": {
+    "queryStrategy": "UseIPv4",
+    "servers": [
+      {
+        "address": "77.88.8.8",
+        "domains": [
+          "domain:ru",
+          "domain:xn--p1ai",
+          "domain:su"
+        ],
+        "skipFallback": true
+      },
+      "https://dns.google/dns-query",
+      "1.1.1.1",
+      "8.8.8.8"
+    ]
+  },
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "protocol": [
+          "bittorrent"
+        ],
+        "outboundTag": "DIRECT"
+      },
+      {
+        "ip": [
+          "127.0.0.0/8",
+          "10.0.0.0/8",
+          "172.16.0.0/12",
+          "192.168.0.0/16",
+          "169.254.0.0/16",
+          "100.64.0.0/10",
+          "::1/128",
+          "fc00::/7",
+          "fe80::/10"
+        ],
+        "outboundTag": "DIRECT"
+      },
+      {
+        "network": "udp",
+        "port": "443",
+        "outboundTag": "BLOCK"
+      },
+      {
+        "domain": [
+          "domain:ru",
+          "domain:xn--p1ai",
+          "domain:su",
+          "domain:avito.ru",
+          "domain:avito.st",
+          "domain:ozon.ru",
+          "domain:ozonusercontent.com",
+          "domain:wildberries.ru",
+          "domain:wbstatic.net",
+          "domain:wildberries.by",
+          "domain:dns-shop.ru",
+          "domain:mvideo.ru",
+          "domain:citilink.ru",
+          "domain:tbank.ru",
+          "domain:tinkoff.ru",
+          "domain:sberbank.ru",
+          "domain:vtb.ru",
+          "domain:alfabank.ru",
+          "domain:gazprombank.ru",
+          "domain:moex.com",
+          "domain:cbr.ru",
+          "domain:gosuslugi.ru",
+          "domain:mos.ru",
+          "domain:nalog.ru",
+          "domain:gu-st.ru",
+          "domain:2gis.ru",
+          "domain:2gis.com",
+          "domain:hh.ru",
+          "domain:youla.ru",
+          "domain:youla.io",
+          "domain:okko.tv",
+          "domain:premier.one",
+          "domain:ivi.ru",
+          "domain:kinopoisk.ru",
+          "domain:userapi.com",
+          "domain:vk-portal.net",
+          "domain:yastatic.net",
+          "domain:yastat.net",
+          "domain:yandex.net",
+          "domain:yandexcloud.net"
+        ],
+        "outboundTag": "DIRECT"
+      },
+      {
+        "network": "tcp,udp",
+        "outboundTag": "proxy"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+# STRATA-DIRECT — без VPN: российские сервисы и то, что из РФ работает напрямую.
+# Свои домены добавляйте в strata-direct-custom, не сюда.
+include:strata-direct-custom
+include:strata-cdn
+# из hydraponique/roscomvpn-geosite (MIT), подтягивается при каждой сборке:
+include:category-ru
+include:whitelist
+include:microsoft
+include:apple
+include:epicgames
+include:riot
+include:escapefromtarkov
+include:steam
+include:twitch
+include:pinterest
+include:faceit

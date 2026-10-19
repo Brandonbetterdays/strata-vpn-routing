@@ -1,0 +1,4 @@
+# STRATA-ADS — блокировать: реклама и трекеры.
+include:strata-ads-custom
+# из hydraponique/roscomvpn-geosite (MIT):
+include:category-ads
