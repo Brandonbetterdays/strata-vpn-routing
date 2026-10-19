@@ -421,3 +421,19 @@ domain:whatismyipaddress.com
 domain:myip.com
 domain:ipchicken.com
 domain:dnsleaktest.com
+
+# Google целиком: иначе часть запросов YouTube/Google уходит напрямую через кэш-серверы Google
+# с российскими IP, и YouTube определяет страну как RU
+domain:google.com
+domain:google.ru
+domain:googleapis.com
+domain:gstatic.com
+domain:googleusercontent.com
+domain:gvt1.com
+domain:gvt2.com
+domain:gvt3.com
+domain:googleadservices.com
+domain:googlesyndication.com
+domain:withgoogle.com
+domain:g.co
+domain:goo.gl
