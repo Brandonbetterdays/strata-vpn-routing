@@ -51,6 +51,7 @@ domain:2gis.kz
 domain:2gis.tj
 domain:2gis.ua
 domain:2gis.uz
+domain:2ip.io
 domain:3ebra.net
 domain:3lateral.com
 domain:40shopping.com
@@ -1519,6 +1520,7 @@ domain:ibook.eu
 domain:ibook.net
 domain:ibookpartner.com
 domain:ibooksauthor.com
+domain:icanhazip.com
 domain:ichat.co.in
 domain:icloud-apple.cn
 domain:icloud-content.com
@@ -1605,12 +1607,14 @@ domain:icqtoday.com
 domain:icqtutor.com
 domain:icqvideo.com
 domain:ideco.dev
+domain:ident.me
 domain:ids-apple.com
 domain:idvd.eu
 domain:ie10.com
 domain:ie11.com
 domain:ie8.co
 domain:ie9.com
+domain:ifconfig.co
 domain:ifconfig.me
 domain:igoshopping.net
 domain:ikids.com
@@ -1673,6 +1677,7 @@ domain:ipadmini.cm
 domain:ipadmini.com.lk
 domain:ipadmini.lk
 domain:ipadpro.buzz
+domain:ipapi.co
 domain:ipapi.is
 domain:iphine.com
 domain:iphone-8.com.cn
@@ -1724,6 +1729,7 @@ domain:iphoto.no
 domain:iphoto.se
 domain:iphoto.wang
 domain:ipify.org
+domain:ipinfo.io
 domain:iplocate.io
 domain:ipod.ca
 domain:ipod.ch

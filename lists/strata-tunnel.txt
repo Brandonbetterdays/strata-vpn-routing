@@ -1,7 +1,5 @@
 domain:24.kg
 domain:2407.pl
-domain:2ip.io
-domain:2ip.ru
 domain:37signals.com
 domain:4pda.ru
 domain:4pda.to
@@ -162,7 +160,6 @@ domain:cesium.com
 domain:chaos.com
 domain:chat.com
 domain:chatfuel.com
-domain:checkip.amazonaws.com
 domain:cherta.media
 domain:chronicles.media
 domain:cici.com
@@ -404,13 +401,9 @@ domain:hybrid-analysis.com
 domain:hyundainews.com
 domain:iaai.com
 domain:ibm.com
-domain:icanhazip.com
 domain:icd10data.com
 domain:idelreal.org
-domain:ident.me
 domain:idtech.services
-domain:ifconfig.co
-domain:ifconfig.me
 domain:iherb.com
 domain:ikea.com
 domain:imagecache365.com
@@ -424,15 +417,9 @@ domain:intellipaat.com
 domain:intercomassets.com
 domain:intercomcdn.com
 domain:intuitibits.com
-domain:ip.sb
-domain:ipapi.co
-domain:ipapi.is
 domain:ipchicken.com
 domain:iperf3serverlist.net
-domain:ipify.org
-domain:ipinfo.io
 domain:ipleak.net
-domain:iplocate.io
 domain:istories.media
 domain:itninja.com
 domain:itsmycity.ru
@@ -791,7 +778,6 @@ domain:sgsnssdk.com
 domain:shikimori.io
 domain:shiksha.com
 domain:shinyhardware.co.uk
-domain:showip.net
 domain:showtime.com
 domain:sibreal.org
 domain:siemens.com
