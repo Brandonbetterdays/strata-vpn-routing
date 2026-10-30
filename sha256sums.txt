@@ -1,2 +1,2 @@
 20fcdc6e1bc5acf5b62302e86aa57947f00864488928fde390cd86550b44cd29  geosite.dat
-620b2bcee963f87dcbdbf646becd3768dff0b9ec7c8641c7fc1bd616f2fd561e  geoip.dat
+ab81e6daff6766fa7cb7f4e72ae8ee5f3ab24e3529d59b7811bff2f9d9ecbc24  geoip.dat
