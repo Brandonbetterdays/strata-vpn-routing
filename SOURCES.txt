@@ -1,4 +1,4 @@
 strata-vpn-routing @ 1dee842
-v2fly/domain-list-community @ 333d8a1 2026-10-28
+v2fly/domain-list-community @ 3895d9a 2026-11-04
 hydraponique/roscomvpn-geosite @ 3003240 2026-10-12
-Loyalsoldier/geoip @ 084eb11 2026-10-23
+Loyalsoldier/geoip @ 7c080bf 2026-11-03
