@@ -66,11 +66,27 @@
     "queryStrategy": "UseIPv4",
     "servers": [
       {
+        "tag": "dns-direct",
         "address": "77.88.8.8",
         "domains": [
           "domain:ru",
           "domain:xn--p1ai",
-          "domain:su"
+          "domain:su",
+          "domain:avito.st",
+          "domain:ozonusercontent.com",
+          "domain:wbstatic.net",
+          "domain:wildberries.by",
+          "domain:moex.com",
+          "domain:2gis.com",
+          "domain:youla.io",
+          "domain:okko.tv",
+          "domain:premier.one",
+          "domain:userapi.com",
+          "domain:vk-portal.net",
+          "domain:yastatic.net",
+          "domain:yastat.net",
+          "domain:yandex.net",
+          "domain:yandexcloud.net"
         ],
         "skipFallback": true
       },
@@ -80,13 +96,19 @@
     ]
   },
   "routing": {
-    "domainStrategy": "IPIfNonMatch",
+    "domainStrategy": "AsIs",
     "rules": [
+      {
+        "inboundTag": [
+          "dns-direct"
+        ],
+        "outboundTag": "DIRECT"
+      },
       {
         "protocol": [
           "bittorrent"
         ],
-        "outboundTag": "DIRECT"
+        "outboundTag": "BLOCK"
       },
       {
         "ip": [
@@ -103,46 +125,19 @@
         "outboundTag": "DIRECT"
       },
       {
-        "network": "udp",
-        "port": "443",
-        "outboundTag": "BLOCK"
-      },
-      {
         "domain": [
           "domain:ru",
           "domain:xn--p1ai",
           "domain:su",
-          "domain:avito.ru",
           "domain:avito.st",
-          "domain:ozon.ru",
           "domain:ozonusercontent.com",
-          "domain:wildberries.ru",
           "domain:wbstatic.net",
           "domain:wildberries.by",
-          "domain:dns-shop.ru",
-          "domain:mvideo.ru",
-          "domain:citilink.ru",
-          "domain:tbank.ru",
-          "domain:tinkoff.ru",
-          "domain:sberbank.ru",
-          "domain:vtb.ru",
-          "domain:alfabank.ru",
-          "domain:gazprombank.ru",
           "domain:moex.com",
-          "domain:cbr.ru",
-          "domain:gosuslugi.ru",
-          "domain:mos.ru",
-          "domain:nalog.ru",
-          "domain:gu-st.ru",
-          "domain:2gis.ru",
           "domain:2gis.com",
-          "domain:hh.ru",
-          "domain:youla.ru",
           "domain:youla.io",
           "domain:okko.tv",
           "domain:premier.one",
-          "domain:ivi.ru",
-          "domain:kinopoisk.ru",
           "domain:userapi.com",
           "domain:vk-portal.net",
           "domain:yastatic.net",
@@ -151,6 +146,11 @@
           "domain:yandexcloud.net"
         ],
         "outboundTag": "DIRECT"
+      },
+      {
+        "network": "udp",
+        "port": "443",
+        "outboundTag": "BLOCK"
       },
       {
         "network": "tcp,udp",

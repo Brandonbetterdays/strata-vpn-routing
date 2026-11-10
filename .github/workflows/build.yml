@@ -28,12 +28,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout sources
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           fetch-depth: 0          # make_profile.py reads the commit time of profile/strata.json
 
       - name: Setup Go
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5
         with:
           go-version: stable      # builders pin their own versions; GOTOOLCHAIN=auto fetches them
           cache: false
@@ -44,7 +44,12 @@ jobs:
       - name: Get Xray (latest release) for the start-up test
         run: |
           set -euo pipefail
-          curl -fsSL --retry 3 -o xray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
+          base=https://github.com/XTLS/Xray-core/releases/latest/download
+          curl -fsSL --retry 3 -o xray.zip "$base/Xray-linux-64.zip"
+          curl -fsSL --retry 3 -o xray.dgst "$base/Xray-linux-64.zip.dgst"
+          # the release's own SHA2-256 line: catches a broken or swapped download before the binary runs
+          want=$(sed -n 's/^SHA2-256= *//p' xray.dgst)
+          echo "$want  xray.zip" | sha256sum -c -
           unzip -oq xray.zip xray -d .xray && chmod +x .xray/xray && .xray/xray version | head -1
 
       - name: Get the last published files
