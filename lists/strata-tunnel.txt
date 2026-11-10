@@ -69,6 +69,7 @@ domain:arsvest.ru
 domain:astockcdn.net
 domain:astra.press
 domain:atlassian.com
+domain:atmeta.com
 domain:atom.io
 domain:att.com
 domain:atwiki.jp
@@ -141,6 +142,7 @@ domain:carrefouruae.com
 domain:cats.com
 domain:cdn-spotify-experiments.conductrics.com
 domain:cdn-telegram.org
+domain:cdninstagram.com
 domain:cdromance.org
 domain:cdw.com
 domain:census.gov
@@ -213,6 +215,16 @@ domain:dickssportinggoods.com
 domain:diffblue.com
 domain:digikey.com
 domain:digitalcontent.sky
+domain:dis.gd
+domain:discord.co
+domain:discord.com
+domain:discord.gg
+domain:discord.gift
+domain:discord.media
+domain:discordapp.com
+domain:discordapp.net
+domain:discordcdn.com
+domain:discordstatus.com
 domain:discours.io
 domain:disctech.com
 domain:disneyplus.com
@@ -247,11 +259,18 @@ domain:euronews.com
 domain:euroradio.fm
 domain:extremetech.com
 domain:f1.com
+domain:facebook.com
+domain:facebook.net
 domain:familysearch.org
 domain:fanatical.com
 domain:fast.com
 domain:fastflux.ai
 domain:fastspring.com
+domain:fb.com
+domain:fb.me
+domain:fbcdn.net
+domain:fbmessenger.com
+domain:fbsbx.com
 domain:filebin.net
 domain:findagrave.com
 domain:flexpool.io
@@ -350,7 +369,6 @@ domain:graniru.org
 domain:graph.org
 domain:graylog.org
 domain:grazie.ai
-domain:grok.x.com
 domain:groq.com
 domain:groupon.com
 domain:grouponcdn.com
@@ -390,6 +408,8 @@ domain:ibm.com
 domain:icd10data.com
 domain:idelreal.org
 domain:idtech.services
+domain:ig.me
+domain:igcdn.com
 domain:iherb.com
 domain:ikea.com
 domain:imagecache365.com
@@ -398,6 +418,7 @@ domain:infineon.com
 domain:informit.com
 domain:insanelymac.com
 domain:insideevs.com
+domain:instagram.com
 domain:intellipaat.com
 domain:intercomassets.com
 domain:intercomcdn.com
@@ -443,10 +464,12 @@ domain:lenso.ai
 domain:letyshops.com
 domain:lf16-pkgcdn.pitaya-clientai.com
 domain:lf19-pkgcdn.pitaya-clientai.com
+domain:licdn.com
 domain:lidarr.audio
 domain:lifehacker.com
 domain:lightburnsoftware.com
 domain:lightning.ai
+domain:linkedin.com
 domain:linuxiac.com
 domain:lipstickalley.com
 domain:liquibase.com
@@ -454,9 +477,11 @@ domain:liquidsky.com
 domain:live.net
 domain:livekit.cloud
 domain:llamameta.net
+domain:lnkd.in
 domain:locals.md
 domain:logo.com
 domain:lowes.com
+domain:m.me
 domain:m3u.in
 domain:macpaw.com
 domain:macvendors.com
@@ -482,6 +507,8 @@ domain:meest-shop.com
 domain:megogo.net
 domain:meraki.com
 domain:meshcapade.com
+domain:messenger.com
+domain:meta.ai
 domain:meta.com
 domain:metademolab.com
 domain:metla.press
@@ -599,6 +626,7 @@ domain:pcmag.com
 domain:penguin.com
 domain:penguinrandomhouse.com
 domain:perforce.com
+domain:periscope.tv
 domain:peter-tanner.com
 domain:pexels.com
 domain:philscomputerlab.com
@@ -637,6 +665,7 @@ domain:protonweb.com
 domain:provereno.media
 domain:prowlarr.com
 domain:pscdn.co
+domain:pscp.tv
 domain:ptc.com
 domain:pulselive.com
 domain:pump.fun
@@ -812,6 +841,7 @@ domain:synoforum.com
 domain:sysdig.com
 domain:systemtek.co.uk
 domain:t-invariant.org
+domain:t.co
 domain:t.me
 domain:talosintelligence.com
 domain:target.com
@@ -848,6 +878,8 @@ domain:thenewtab.io
 domain:thesassway.com
 domain:thinkpads.com
 domain:thomas-krenn.com
+domain:threads.com
+domain:threads.net
 domain:ti.com
 domain:tik-tokapi.com
 domain:tiktok-minis.com
@@ -890,6 +922,9 @@ domain:tutanota.com
 domain:tvn24.pl
 domain:tvrain.ru
 domain:tvrain.tv
+domain:twimg.com
+domain:twitter.com
+domain:twttr.com
 domain:tx.me
 domain:typekit.com
 domain:typekit.net
@@ -924,6 +959,7 @@ domain:vot-tak.tv
 domain:votvot.tv
 domain:vpnunlimited.com
 domain:vyos.io
+domain:wa.me
 domain:wakanim.tv
 domain:walletconnect.com
 domain:walmart.com
@@ -941,6 +977,8 @@ domain:weebly.com
 domain:wellfound.com
 domain:wetransfer.com
 domain:whatismyipaddress.com
+domain:whatsapp.com
+domain:whatsapp.net
 domain:whoer.net
 domain:widgetapp.stream
 domain:wikidot.com
@@ -954,6 +992,7 @@ domain:wonderzine.com
 domain:wpengine.com
 domain:wunderground.com
 domain:x.ai
+domain:x.com
 domain:xboxdesignlab.xbox.com
 domain:xfantazy.com
 domain:xmg.gg
