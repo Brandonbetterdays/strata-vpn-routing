@@ -437,3 +437,53 @@ domain:googlesyndication.com
 domain:withgoogle.com
 domain:g.co
 domain:goo.gl
+
+# --- Сервисы, заблокированные в России, которых нет в roscomvpn-geosite (проверено 10.11.2026) ---
+# Раньше шли в VPN только через IPIfNonMatch (по IP после DNS-запроса); теперь — сразу по домену.
+# Основные домены взяты из v2fly/domain-list-community @ 2b7ae32 (MIT): data/facebook, messenger,
+# instagram, threads, whatsapp, twitter, discord, linkedin, meta. Опечатки-домены из тех списков не переносились.
+# Meta
+domain:facebook.com
+domain:facebook.net
+domain:fb.com
+domain:fb.me
+domain:fbcdn.net
+domain:fbsbx.com
+domain:messenger.com
+domain:fbmessenger.com
+domain:m.me
+domain:instagram.com
+domain:cdninstagram.com
+domain:igcdn.com
+domain:ig.me
+domain:threads.com
+domain:threads.net
+domain:whatsapp.com
+domain:whatsapp.net
+domain:wa.me
+domain:meta.com
+domain:meta.ai
+domain:atmeta.com
+# X (Twitter)
+domain:x.com
+domain:twitter.com
+domain:twimg.com
+domain:t.co
+domain:twttr.com
+domain:pscp.tv
+domain:periscope.tv
+# Discord
+domain:discord.com
+domain:discord.gg
+domain:discord.co
+domain:discord.media
+domain:discord.gift
+domain:dis.gd
+domain:discordapp.com
+domain:discordapp.net
+domain:discordcdn.com
+domain:discordstatus.com
+# LinkedIn
+domain:linkedin.com
+domain:licdn.com
+domain:lnkd.in

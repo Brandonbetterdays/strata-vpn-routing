@@ -6,6 +6,7 @@
 |---|---|---|---|
 | Списки доменов `category-ru`, `whitelist`, `category-geoblock-ru`, `youtube`, `telegram`, `github`, `google-play`, `google-deepmind`, `twitch-ads`, `category-ads`, `torrent`, `win-spy`, `private`, игровые/Apple/Microsoft | [hydraponique/roscomvpn-geosite](https://github.com/hydraponique/roscomvpn-geosite) | MIT (© V2Ray, файл LICENSE в репозитории) | скачиваются при каждой сборке и включаются в `geosite.dat` через `include:` |
 | Сборщик `geosite.dat` | [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community) | MIT | запускается в CI, в репозиторий не копируется |
+| Основные домены Meta, X, Discord, LinkedIn (списки `facebook`, `messenger`, `instagram`, `threads`, `whatsapp`, `twitter`, `discord`, `linkedin`, `meta`) | v2fly/domain-list-community @ `2b7ae32` | MIT | выборка без доменов-опечаток скопирована в `data/strata-tunnel-custom` |
 | Список российских IP (`text/ru.txt`) | [Loyalsoldier/geoip](https://github.com/Loyalsoldier/geoip), ветка release | данные — CC BY-SA 4.0 | основа категорий `ru` и `direct` в `geoip.dat`; `geoip.dat` распространяется на тех же условиях (CC BY-SA 4.0) |
 | Сборщик `geoip.dat` | Loyalsoldier/geoip | GPL-3.0 | запускается в CI, в репозиторий не копируется |
 | Проверка | [XTLS/Xray-core](https://github.com/XTLS/Xray-core) | MPL-2.0 | `xray run -test` в CI |
